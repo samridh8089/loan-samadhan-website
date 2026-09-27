@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { HelpCircle, Sparkles, PhoneCall, ArrowRight, MessageCircle } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "लोन नहीं तो कोई फीस नहीं FAQ"
   ],
   alternates: {
-    canonical: "https://www.loansamadhan.in/faq",
+    canonical: "https://www.loan-samadhan.in/faq",
   },
 };
 

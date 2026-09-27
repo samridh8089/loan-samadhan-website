@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Calculator, Sparkles, CheckCircle2, ShieldCheck, ArrowRight, HelpCircle } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import EmiCalculatorWidget from "@/components/EmiCalculatorWidget";
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Car loan interest calculator Udaipur"
   ],
   alternates: {
-    canonical: "https://www.loansamadhan.in/emi-calculator",
+    canonical: "https://www.loan-samadhan.in/emi-calculator",
   },
 };
 

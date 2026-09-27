@@ -1,4 +1,4 @@
-export interface ServiceItem {
+﻿export interface ServiceItem {
   id: string;
   slug: string;
   name: string;
@@ -27,7 +27,7 @@ export const SITE_CONFIG = {
   phone: "08949266064",
   phoneDisplay: "+91 89492 66064",
   whatsappNumber: "918949266064",
-  email: "contact@loansamadhan.in",
+  email: "contact@loan-samadhan.in",
   address: {
     office: "214, 2nd Floor, Riddhi Siddhi Complex",
     street: "Chetak Road, Madhuban",

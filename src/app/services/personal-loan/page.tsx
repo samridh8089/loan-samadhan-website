@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { 
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "Debt consolidation loan Udaipur"
   ],
   alternates: {
-    canonical: "https://www.loansamadhan.in/services/personal-loan",
+    canonical: "https://www.loan-samadhan.in/services/personal-loan",
   },
 };
 

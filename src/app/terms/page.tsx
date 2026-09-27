@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { SITE_CONFIG } from "@/data/siteData";
 
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Terms of Service for Loan Samadhan Udaipur. Understand our consultancy relationship and banking channel partner policies.",
   alternates: {
-    canonical: "https://www.loansamadhan.in/terms",
+    canonical: "https://www.loan-samadhan.in/terms",
   },
 };
 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -23,7 +23,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://loansamadhan.vercel.app"),
+  metadataBase: new URL("https://www.loan-samadhan.in"),
   title: {
     default: "Loan Samadhan Udaipur | Home, Business, Personal & Car Loan Consultant",
     template: "%s | Loan Samadhan Udaipur",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://www.loansamadhan.in",
+    url: "https://www.loan-samadhan.in",
     siteName: "Loan Samadhan",
     title: "Loan Samadhan | हर जरूरत के लिए सही लोन समाधान",
     description: "लोन नहीं तो कोई फीस नहीं - Lowest interest loan assistance through 25+ partner banks in Udaipur, Rajasthan.",
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.loansamadhan.in",
+    canonical: "https://www.loan-samadhan.in",
   },
 };
 
@@ -103,9 +103,9 @@ export default function RootLayout({
     "@type": "FinancialService",
     name: SITE_CONFIG.name,
     legalName: SITE_CONFIG.legalName,
-    url: "https://www.loansamadhan.in",
-    logo: "https://www.loansamadhan.in/images/logo.png",
-    image: "https://www.loansamadhan.in/images/logo.png",
+    url: "https://www.loan-samadhan.in",
+    logo: "https://www.loan-samadhan.in/images/logo.png",
+    image: "https://www.loan-samadhan.in/images/logo.png",
     telephone: SITE_CONFIG.phone,
     priceRange: "Zero Upfront Fees (लोन नहीं तो कोई फीस नहीं)",
     slogan: SITE_CONFIG.taglineHindi,

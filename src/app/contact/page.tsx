@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { 
   MapPin, 
   Phone, 
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "Loan office Madhuban Udaipur"
   ],
   alternates: {
-    canonical: "https://www.loansamadhan.in/contact",
+    canonical: "https://www.loan-samadhan.in/contact",
   },
 };
 

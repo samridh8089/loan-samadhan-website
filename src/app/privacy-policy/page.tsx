@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Privacy Policy for Loan Samadhan Udaipur. Details regarding information collection, security, and banking compliance.",
   alternates: {
-    canonical: "https://www.loansamadhan.in/privacy-policy",
+    canonical: "https://www.loan-samadhan.in/privacy-policy",
   },
 };
 
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
           <div className="prose prose-slate max-w-none space-y-6 text-sm sm:text-base text-gray-700 leading-relaxed">
             <h2 className="text-xl font-bold text-navy-900">1. Commitment to Privacy</h2>
             <p>
-              At <strong>Loan Samadhan</strong>, accessible from https://www.loansamadhan.in, we understand that financial documents and personal records (such as PAN cards, Aadhaar cards, ITR returns, and bank statements) are extremely sensitive. We are dedicated to ensuring the highest standards of data confidentiality, encryption, and institutional compliance.
+              At <strong>Loan Samadhan</strong>, accessible from https://www.loan-samadhan.in, we understand that financial documents and personal records (such as PAN cards, Aadhaar cards, ITR returns, and bank statements) are extremely sensitive. We are dedicated to ensuring the highest standards of data confidentiality, encryption, and institutional compliance.
             </p>
 
             <h2 className="text-xl font-bold text-navy-900">2. Information We Collect</h2>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { 
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description:
     "Learn about Loan Samadhan, our 12+ years journey in Udaipur, Rajasthan, and our foundational ethos 'लोन नहीं तो कोई फीस नहीं'. Trusted by over 8,500 happy borrowers.",
   alternates: {
-    canonical: "https://www.loansamadhan.in/about",
+    canonical: "https://www.loan-samadhan.in/about",
   },
 };
 

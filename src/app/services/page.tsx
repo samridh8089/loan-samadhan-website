@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { 
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "Explore our complete range of loan solutions in Udaipur: Home Loans, Business Loans, Personal Loans, Car Loans, and LAP. 25+ partner banks with lowest ROI.",
   alternates: {
-    canonical: "https://www.loansamadhan.in/services",
+    canonical: "https://www.loan-samadhan.in/services",
   },
 };
 
