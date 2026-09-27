@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
-import { X, CheckCircle, ShieldCheck, PhoneCall, Sparkles, Send } from "lucide-react";
+import { X, CheckCircle, ShieldCheck, PhoneCall, Sparkles, Send, MessageCircle } from "lucide-react";
 import { SITE_CONFIG, SERVICES } from "@/data/siteData";
 
 export interface ModalPayload {
@@ -29,6 +29,7 @@ export default function ApplyModal() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [waLink, setWaLink] = useState("");
 
   useEffect(() => {
     const handleOpen = (e: Event) => {
@@ -52,6 +53,32 @@ export default function ApplyModal() {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const messageLines = [
+      `*New Loan Consultation Request - Loan Samadhan*`,
+      `━━━━━━━━━━━━━━━━━━━━`,
+      `*Full Name:* ${formData.name}`,
+      `*Mobile Number:* +91 ${formData.mobile}`,
+      `*City / Location:* ${formData.city}`,
+      `*Loan Type:* ${formData.loanType}`,
+      `*Estimated Amount:* ${formData.amount}`,
+      formData.message ? `*Specific Requirement:* ${formData.message}` : null,
+      `━━━━━━━━━━━━━━━━━━━━`,
+      `"लोन नहीं तो कोई फीस नहीं"`,
+      `Loan Samadhan Udaipur | Office: Riddhi Siddhi Complex`
+    ].filter(Boolean).join("\n");
+
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${SITE_CONFIG.whatsappNumber}&text=${encodeURIComponent(messageLines)}`;
+    setWaLink(whatsappUrl);
+
+    // Open WhatsApp directly
+    if (typeof window !== "undefined") {
+      try {
+        window.open(whatsappUrl, "_blank");
+      } catch (err) {
+        console.error("Popup window error:", err);
+      }
+    }
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
@@ -64,7 +91,7 @@ export default function ApplyModal() {
       } catch (err) {
         console.error(err);
       }
-    }, 900);
+    }, 600);
   };
 
   const handleClose = () => {
@@ -131,21 +158,34 @@ export default function ApplyModal() {
                 </div>
               </div>
 
-              <div className="pt-4 flex flex-col sm:flex-row gap-3">
-                <a
-                  href={`tel:${SITE_CONFIG.phone}`}
-                  className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 bg-navy-900 hover:bg-navy-800 text-white rounded-xl font-medium text-sm transition-all"
-                >
-                  <PhoneCall className="w-4 h-4 text-emerald-400" />
-                  <span>Call Us Directly</span>
-                </a>
-                <button
-                  type="button"
-                  onClick={handleClose}
-                  className="flex-1 py-3 px-4 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl font-medium text-sm transition-all"
-                >
-                  Done
-                </button>
+              <div className="pt-4 flex flex-col gap-2.5">
+                {waLink && (
+                  <a
+                    href={waLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 bg-emerald hover:bg-emerald-hover text-white rounded-xl font-bold text-sm transition-all shadow-lg shadow-emerald/20 hover:scale-[1.01] active:scale-[0.99]"
+                  >
+                    <MessageCircle className="w-5 h-5 fill-white" />
+                    <span>WhatsApp पर विवरण भेजें (+91 89492 66064)</span>
+                  </a>
+                )}
+                <div className="flex flex-col sm:flex-row gap-2.5">
+                  <a
+                    href={`tel:${SITE_CONFIG.phone}`}
+                    className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-navy-900 hover:bg-navy-800 text-white rounded-xl font-medium text-xs transition-all"
+                  >
+                    <PhoneCall className="w-4 h-4 text-emerald-400" />
+                    <span>Call Us Directly</span>
+                  </a>
+                  <button
+                    type="button"
+                    onClick={handleClose}
+                    className="flex-1 py-2.5 px-4 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl font-medium text-xs transition-all"
+                  >
+                    Close (बंद करें)
+                  </button>
+                </div>
               </div>
             </div>
           ) : (
@@ -255,17 +295,20 @@ export default function ApplyModal() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3.5 px-6 rounded-xl font-semibold text-white bg-gradient-banking hover:bg-gradient-banking-hover shadow-lg shadow-royal/20 hover:shadow-xl hover:shadow-royal/30 transition-all flex items-center justify-center gap-2 disabled:opacity-70 text-sm md:text-base"
+                className="w-full py-3.5 px-6 rounded-xl font-semibold text-white bg-gradient-banking hover:bg-gradient-banking-hover shadow-lg shadow-royal/20 hover:shadow-xl hover:shadow-royal/30 transition-all flex items-center justify-center gap-2 disabled:opacity-70 text-sm md:text-base cursor-pointer"
               >
                 {isSubmitting ? (
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 ) : (
                   <>
-                    <Send className="w-4 h-4" />
-                    <span>Get Free Loan Sanction Quotes</span>
+                    <MessageCircle className="w-4 h-4 fill-white" />
+                    <span>Get Loan Sanction Quotes on WhatsApp</span>
                   </>
                 )}
               </button>
+              <p className="text-center text-[11px] text-gray-400">
+                Your loan request details will be sent directly to Loan Samadhan on WhatsApp (+91 89492 66064).
+              </p>
             </form>
           )}
         </div>

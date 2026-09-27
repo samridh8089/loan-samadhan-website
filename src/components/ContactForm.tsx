@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import confetti from "canvas-confetti";
-import { CheckCircle2, ShieldCheck, Send, Sparkles, PhoneCall } from "lucide-react";
+import { CheckCircle2, ShieldCheck, Send, Sparkles, PhoneCall, MessageCircle } from "lucide-react";
 import { SITE_CONFIG, SERVICES } from "@/data/siteData";
 
 export default function ContactForm() {
@@ -16,10 +16,36 @@ export default function ContactForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [waLink, setWaLink] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    const messageLines = [
+      `*New Loan Consultation Request - Loan Samadhan*`,
+      `━━━━━━━━━━━━━━━━━━━━`,
+      `*Applicant Name:* ${formData.name}`,
+      `*Mobile Number:* +91 ${formData.mobile}`,
+      `*City / Location:* ${formData.city}`,
+      `*Loan Product:* ${formData.loanType}`,
+      `*Required Amount:* ${formData.amount}`,
+      formData.message ? `*Notes / Requirements:* ${formData.message}` : null,
+      `━━━━━━━━━━━━━━━━━━━━`,
+      `"लोन नहीं तो कोई फीस नहीं"`,
+      `Loan Samadhan Udaipur | Office: Riddhi Siddhi Complex`
+    ].filter(Boolean).join("\n");
+
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${SITE_CONFIG.whatsappNumber}&text=${encodeURIComponent(messageLines)}`;
+    setWaLink(whatsappUrl);
+
+    if (typeof window !== "undefined") {
+      try {
+        window.open(whatsappUrl, "_blank");
+      } catch (err) {
+        console.error("Popup window error:", err);
+      }
+    }
 
     setTimeout(() => {
       setIsSubmitting(false);
@@ -33,7 +59,7 @@ export default function ContactForm() {
       } catch (err) {
         console.error(err);
       }
-    }, 1000);
+    }, 600);
   };
 
   return (
@@ -78,21 +104,34 @@ export default function ContactForm() {
             </div>
           </div>
 
-          <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center max-w-xs mx-auto">
-            <a
-              href={`tel:${SITE_CONFIG.phone}`}
-              className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-navy-900 text-white font-semibold text-xs transition-colors hover:bg-navy-800"
-            >
-              <PhoneCall className="w-4 h-4 text-emerald" />
-              <span>Call Udaipur Office</span>
-            </a>
-            <button
-              type="button"
-              onClick={() => setIsSubmitted(false)}
-              className="py-3 px-5 rounded-xl bg-gray-100 text-gray-700 font-semibold text-xs hover:bg-gray-200 transition-colors"
-            >
-              Submit Another Inquiry
-            </button>
+          <div className="pt-2 flex flex-col gap-2.5 max-w-sm mx-auto">
+            {waLink && (
+              <a
+                href={waLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-emerald text-white font-bold text-sm shadow-lg shadow-emerald/20 hover:bg-emerald-hover transition-all hover:scale-[1.01] active:scale-[0.99]"
+              >
+                <MessageCircle className="w-5 h-5 fill-white" />
+                <span>WhatsApp पर विवरण भेजें (+91 89492 66064)</span>
+              </a>
+            )}
+            <div className="flex gap-2">
+              <a
+                href={`tel:${SITE_CONFIG.phone}`}
+                className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-navy-900 text-white font-semibold text-xs transition-colors hover:bg-navy-800"
+              >
+                <PhoneCall className="w-3.5 h-3.5 text-emerald" />
+                <span>Call Udaipur Office</span>
+              </a>
+              <button
+                type="button"
+                onClick={() => setIsSubmitted(false)}
+                className="flex-1 py-2.5 px-4 rounded-xl bg-gray-100 text-gray-700 font-semibold text-xs hover:bg-gray-200 transition-colors"
+              >
+                New Inquiry (नया आवेदन)
+              </button>
+            </div>
           </div>
         </div>
       ) : (
@@ -215,17 +254,20 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-4 px-6 rounded-xl font-bold text-white bg-gradient-banking hover:bg-gradient-banking-hover shadow-lg shadow-royal/20 hover:shadow-xl hover:shadow-royal/30 transition-all flex items-center justify-center gap-2 text-sm sm:text-base disabled:opacity-75"
+            className="w-full py-4 px-6 rounded-xl font-bold text-white bg-gradient-banking hover:bg-gradient-banking-hover shadow-lg shadow-royal/20 hover:shadow-xl hover:shadow-royal/30 transition-all flex items-center justify-center gap-2 text-sm sm:text-base disabled:opacity-75 cursor-pointer"
           >
             {isSubmitting ? (
               <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
             ) : (
               <>
-                <Send className="w-4 h-4" />
-                <span>Get Free Loan Consultation</span>
+                <MessageCircle className="w-5 h-5 fill-white" />
+                <span>Get Loan Consultation on WhatsApp</span>
               </>
             )}
           </button>
+          <p className="text-center text-xs text-gray-400">
+            Form details are sent directly to our credit advisor on WhatsApp (+91 89492 66064).
+          </p>
         </form>
       )}
     </div>
