@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Check, X, ShieldCheck, Sparkles, ArrowRight } from "lucide-react";
 import { SITE_CONFIG } from "@/data/siteData";
@@ -9,7 +9,7 @@ export default function ComparisonSection() {
     {
       parameter: "Choice of Lenders",
       directBank: "Limited to that single bank's strict internal policies & rigid eligibility.",
-      loanSamadhan: "25+ Banks & NBFCs compared simultaneously to find the best match for your profile."
+      loanSamadhan: "147+ Banks & NBFCs compared simultaneously to find the best match for your profile."
     },
     {
       parameter: "Interest Rates & ROI",

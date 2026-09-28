@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 import { 
   PhoneCall, 
@@ -101,7 +101,7 @@ export default function HomePage() {
 
               {/* Subheadline */}
               <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                {SITE_CONFIG.subheadlineHindi} Compare interest rates across 25+ trusted banks in Udaipur with zero upfront consultation charges.
+                {SITE_CONFIG.subheadlineHindi} Compare interest rates across 147+ trusted banks in Udaipur with zero upfront consultation charges.
               </p>
 
               {/* Action Buttons */}
@@ -131,7 +131,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span>25+ Bank Options</span>
+                  <span>147+ Bank Options</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-emerald-400" />

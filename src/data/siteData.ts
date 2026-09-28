@@ -42,7 +42,7 @@ export const SITE_CONFIG = {
   experienceYears: "12+",
   totalDisbursed: "₹450+ Cr",
   happyCustomers: "8,500+",
-  bankPartnersCount: "25+",
+  bankPartnersCount: "147+",
   googleRating: "5.0",
   googleReviewsCount: "230+"
 };
@@ -55,7 +55,7 @@ export const SERVICES: ServiceItem[] = [
     hindiName: "होम लोन",
     shortDescription: "Affordable housing finance assistance with lowest interest rates and flexible tenures.",
     heroHeadline: "अपना सपनों का घर बनाएं आसान किस्तों में",
-    heroSubheadline: "Best Home Loan interest rates from 8.35% p.a. through 25+ trusted banking partners in Udaipur.",
+    heroSubheadline: "Best Home Loan interest rates from 8.35% p.a. through 147+ trusted banking partners in Udaipur.",
     interestRate: "Starting 8.35% p.a.",
     maxTenure: "Up to 30 Years",
     maxAmount: "Up to ₹10 Crore",
@@ -495,7 +495,7 @@ export const TRUST_POINTS = [
     description: "Strict data privacy with absolute transparency at every documentation stage."
   },
   {
-    title: "25+ Bank Options",
+    title: "147+ Bank Options",
     description: "Compare multiple PSU, Private banks, and NBFCs under one trusted roof."
   }
 ];
@@ -511,7 +511,7 @@ export const WHY_CHOOSE_US = [
   },
   {
     title: "Multiple Bank Partnerships",
-    description: "Direct empanelment with 25+ top lenders like HDFC, ICICI, SBI, Axis, Kotak, and Tata Capital for maximum loan approval."
+    description: "Direct empanelment with 147+ top lenders like HDFC, ICICI, SBI, Axis, Kotak, and Tata Capital for maximum loan approval."
   },
   {
     title: "Personalized Guidance",
@@ -630,7 +630,7 @@ export const FAQS = [
   {
     category: "General",
     question: "Why should I apply through Loan Samadhan instead of going directly to a single bank?",
-    answer: "When you visit a single bank, you are limited to their rigid credit policies and single interest rate. If they decline, your CIBIL score takes a hit. At Loan Samadhan, we evaluate your profile against 25+ banks and NBFCs simultaneously, negotiate pre-approved corporate rates, and submit your application only where approval chances are highest."
+    answer: "When you visit a single bank, you are limited to their rigid credit policies and single interest rate. If they decline, your CIBIL score takes a hit. At Loan Samadhan, we evaluate your profile against 147+ Banks and NBFCs simultaneously, negotiate pre-approved corporate rates, and submit your application only where approval chances are highest."
   },
   {
     category: "Home Loan",

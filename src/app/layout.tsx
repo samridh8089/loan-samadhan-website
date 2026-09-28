@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
   },
   description:
-    "लोन नहीं तो कोई फीस नहीं - Loan Samadhan is Udaipur's premier finance consultancy offering Home Loans, Business Loans, Personal Loans, Car Loans, and LAP with 25+ leading banks at lowest interest rates.",
+    "लोन नहीं तो कोई फीस नहीं - Loan Samadhan is Udaipur's premier finance consultancy offering Home Loans, Business Loans, Personal Loans, Car Loans, and LAP with 147+ leading banks at lowest interest rates.",
   keywords: [
     "Loan Samadhan Udaipur",
     "Home Loan Udaipur",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     url: "https://www.loan-samadhan.in",
     siteName: "Loan Samadhan",
     title: "Loan Samadhan | हर जरूरत के लिए सही लोन समाधान",
-    description: "लोन नहीं तो कोई फीस नहीं - Lowest interest loan assistance through 25+ partner banks in Udaipur, Rajasthan.",
+    description: "लोन नहीं तो कोई फीस नहीं - Lowest interest loan assistance through 147+ partner banks in Udaipur, Rajasthan.",
     images: [
       {
         url: "/og-image.png",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Loan Samadhan Udaipur | Best Loan Consultant",
-    description: "लोन नहीं तो कोई फीस नहीं. Compare 25+ Banks for Home, Business & Personal Loans in Udaipur.",
+    description: "लोन नहीं तो कोई फीस नहीं. Compare 147+ Banks for Home, Business & Personal Loans in Udaipur.",
     images: ["/images/logo.png"],
   },
   robots: {

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { SITE_CONFIG } from "@/data/siteData";
 
@@ -49,7 +49,7 @@ export default function PrivacyPolicyPage() {
               We utilize client information solely for:
             </p>
             <ul className="list-disc pl-6 space-y-1 text-sm">
-              <li>Evaluating loan eligibility across our 25+ partner banks and NBFCs.</li>
+              <li>Evaluating loan eligibility across our 147+ partner banks and NBFCs.</li>
               <li>Negotiating optimal interest rate concessions on your behalf with bank credit managers.</li>
               <li>Submitting formal loan dossiers to designated financial institutions with your explicit consent.</li>
               <li>Communicating updates, sanction letter terms, and disbursal milestones.</li>

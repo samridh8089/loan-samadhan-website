@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -173,7 +173,7 @@ export default function Header() {
                         Tailored Finance Solutions
                       </div>
                       <div className="text-xs text-navy-900 font-semibold mt-0.5">
-                        Lowest ROI & 25+ Bank Options
+                        Lowest ROI & 147+ Bank Options
                       </div>
                     </div>
                     <div className="space-y-1">

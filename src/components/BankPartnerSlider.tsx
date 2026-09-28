@@ -10,7 +10,7 @@ export default function BankPartnerSlider() {
           <span>Empaneled Lending Network</span>
         </div>
         <h2 className="text-xl sm:text-2xl font-bold text-navy-900 font-heading">
-          25+ Trusted Banking & NBFC Partners
+          147+ Trusted Banking & NBFC Partners
         </h2>
         <p className="text-gray-500 text-xs sm:text-sm max-w-xl mx-auto mt-1">
           We compare real-time interest rates across India's top institutional lenders to guarantee you the most affordable deal.

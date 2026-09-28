@@ -19,7 +19,7 @@ import { SERVICES, SITE_CONFIG } from "@/data/siteData";
 export const metadata: Metadata = {
   title: "Loan Services in Udaipur | Home, Business, Personal, Car & LAP",
   description:
-    "Explore our complete range of loan solutions in Udaipur: Home Loans, Business Loans, Personal Loans, Car Loans, and LAP. 25+ partner banks with lowest ROI.",
+    "Explore our complete range of loan solutions in Udaipur: Home Loans, Business Loans, Personal Loans, Car Loans, and LAP. 147+ partner banks with lowest ROI.",
   alternates: {
     canonical: "https://www.loan-samadhan.in/services",
   },

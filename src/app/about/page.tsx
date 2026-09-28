@@ -48,7 +48,7 @@ export default function AboutPage() {
     {
       icon: <Building2 className="w-6 h-6 text-emerald" />,
       title: "Institutional Clout",
-      description: "Direct ties with 25+ leading banks and NBFCs enable us to negotiate preferential interest rates and expedite credit committee sanctions."
+      description: "Direct ties with 147+ leading banks and NBFCs enable us to negotiate preferential interest rates and expedite credit committee sanctions."
     }
   ];
 

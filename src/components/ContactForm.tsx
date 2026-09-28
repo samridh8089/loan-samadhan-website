@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import confetti from "canvas-confetti";
@@ -81,7 +81,7 @@ export default function ContactForm() {
               परामर्श अनुरोध प्राप्त हुआ!
             </h3>
             <p className="text-gray-600 text-sm max-w-md mx-auto leading-relaxed">
-              Thank you, <strong>{formData.name}</strong>. Our senior credit advisor will call you within <strong>15 minutes</strong> with customized quotes across our 25+ partner banks.
+              Thank you, <strong>{formData.name}</strong>. Our senior credit advisor will call you within <strong>15 minutes</strong> with customized quotes across our 147+ partner banks.
             </p>
           </div>
 

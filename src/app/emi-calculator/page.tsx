@@ -28,7 +28,7 @@ export default function EmiCalculatorPage() {
     },
     {
       q: "Does Loan Samadhan charge any fee to calculate or apply for loans?",
-      a: "No! True to our primary motto 'लोन नहीं तो कोई फीस नहीं', our entire consultancy, rate comparisons across 25+ banks, and door-to-door assistance is 100% free for applicants."
+      a: "No! True to our primary motto 'लोन नहीं तो कोई फीस नहीं', our entire consultancy, rate comparisons across 147+ Banks, and door-to-door assistance is 100% free for applicants."
     },
     {
       q: "How does loan tenure affect my total interest?",
@@ -89,7 +89,7 @@ export default function EmiCalculatorPage() {
                 <div className="p-4 rounded-2xl bg-surface-light border border-gray-200 flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-emerald flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-bold text-navy-900">Compare Across 25+ Banks</h4>
+                    <h4 className="font-bold text-navy-900">Compare Across 147+ Banks</h4>
                     <p className="text-xs text-gray-500 mt-1">
                       A difference of even 0.50% in interest rate can save you up to ₹3,50,000 in interest on a 20-year home loan of ₹30 Lakh.
                     </p>

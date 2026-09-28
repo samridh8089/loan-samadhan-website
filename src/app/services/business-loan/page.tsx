@@ -140,7 +140,7 @@ export default function BusinessLoanPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                  <span>Secured debt facilities up to ₹50 Crore with 25+ partner banks.</span>
+                  <span>Secured debt facilities up to ₹50 Crore with 147+ partner banks.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />

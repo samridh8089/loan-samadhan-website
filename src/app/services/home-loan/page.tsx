@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { 
@@ -24,7 +24,7 @@ const service = SERVICES.find((s) => s.slug === "home-loan")!;
 export const metadata: Metadata = {
   title: "Home Loan in Udaipur | Best Rates starting 8.35% p.a. | Loan Samadhan",
   description:
-    "Affordable Home Loan assistance in Udaipur. Compare HDFC, SBI, ICICI & 25+ banks. Doorstep documentation, PMAY subsidy support, zero consultation fees.",
+    "Affordable Home Loan assistance in Udaipur. Compare HDFC, SBI, ICICI & 147+ Banks. Doorstep documentation, PMAY subsidy support, zero consultation fees.",
   keywords: [
     "Home Loan Udaipur",
     "Housing Loan Rajasthan",
@@ -119,7 +119,7 @@ export default function HomeLoanPage() {
               <ul className="space-y-3 text-sm text-blue-100">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                  <span>Compare rate quotes from 25+ lenders including SBI, HDFC, ICICI, LIC HFL.</span>
+                  <span>Compare rate quotes from 147+ lenders including SBI, HDFC, ICICI, LIC HFL.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
@@ -125,7 +125,7 @@ export default function ApplyModal() {
             निःशुल्क लोन परामर्श (Free Consultation)
           </h3>
           <p className="text-blue-100 text-sm mt-1">
-            Compare 25+ Bank options with zero upfront fees in Udaipur.
+            Compare 147+ Bank Options with zero upfront fees in Udaipur.
           </p>
         </div>
 
